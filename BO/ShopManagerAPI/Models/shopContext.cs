@@ -33,7 +33,7 @@ namespace ShopManagerAPI.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=198lytutrong.hnvgrp.com,1444;Initial Catalog=shop;Persist Security Info=True;User ID=thienphat;Password=thienphat");
+                optionsBuilder.UseSqlServer("Data Source=XXXX,1444;Initial Catalog=shop;Persist Security Info=True;User ID=XXXX;Password=XXXX");
             }
         }
     }
