@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0271149E-061F-4439-86A6-F2B1156D4ADC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MyApplication.My.MyApplication</StartupObject>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>VN_ProductVendor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <SignManifests>false</SignManifests>
+    <ManifestCertificateThumbprint>A060484E026AEF8E3AC68C8B3CB677AE66B45DD3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>VN_PharmacyManagement_TemporaryKey.pfx</ManifestKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <PublishUrl>F:\WorkSpace\VualBasicProject\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VN_ProductVendor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VN_ProductVendor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App_Vendor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.PointOfService\v4.0_1.14.1.0__31bf3856ad364e35\Microsoft.PointOfService.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="factManagementDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>factManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myDB_SQL.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDB_SQL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myDB_SQL.vb">
+      <DependentUpon>myDB_SQL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="others\SysConfig.Designer.vb">
+      <DependentUpon>SysConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="others\SysConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="posprinterDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>posprinterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_AlphabetKeyBoard.Designer.vb">
+      <DependentUpon>SellingUI_AlphabetKeyBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_AlphabetKeyBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_Container_02.Designer.vb">
+      <DependentUpon>SellingUI_Container_02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_Container_02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_AlphaNumKeyBoard_Client.Designer.vb">
+      <DependentUpon>SellingUI_AlphaNumKeyBoard_Client.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_AlphaNumKeyBoard_Client.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_Container.Designer.vb">
+      <DependentUpon>SellingUI_Container.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_Container.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_NumericKeyBoard.Designer.vb">
+      <DependentUpon>SellingUI_NumericKeyBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_NumericKeyBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_GroupProduct.designer.vb">
+      <DependentUpon>SellingUI_GroupProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_GroupProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingInterface_Mobile.Designer.vb">
+      <DependentUpon>SellingInterface_Mobile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingInterface_Mobile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\SellingUI_TabPageControl.Designer.vb">
+      <DependentUpon>SellingUI_TabPageControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="selling\SellingUI_TabPageControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="utilities\ControlLocation.vb" />
+    <Compile Include="utilities\DBConnection.vb" />
+    <Compile Include="utilities\FileReader.vb" />
+    <Compile Include="utilities\LoginToManager.Designer.vb">
+      <DependentUpon>LoginToManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="utilities\LoginToManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="utilities\MyForm.vb" />
+    <Compile Include="utilities\MyFunct.vb" />
+    <Compile Include="utilities\UpdateRQ.vb" />
+    <Compile Include="_lib\AESTool.vb" />
+    <Compile Include="_lib\CultureSwitcher.vb" />
+    <Compile Include="_lib\LangTool.vb" />
+    <Compile Include="_lib\LogTool.vb" />
+    <Compile Include="_lib\MsgBoxTool.vb" />
+    <Compile Include="_lib\PrinterUtilities.vb" />
+    <Compile Include="_lib\setting\MySettingsChanger.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="others\SysConfig.fr.resx">
+      <DependentUpon>SysConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="others\SysConfig.resx">
+      <DependentUpon>SysConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_AlphabetKeyBoard.resx">
+      <DependentUpon>SellingUI_AlphabetKeyBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_Container_02.resx">
+      <DependentUpon>SellingUI_Container_02.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_AlphaNumKeyBoard_Client.resx">
+      <DependentUpon>SellingUI_AlphaNumKeyBoard_Client.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_Container.resx">
+      <DependentUpon>SellingUI_Container.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_NumericKeyBoard.resx">
+      <DependentUpon>SellingUI_NumericKeyBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_GroupProduct.resx">
+      <DependentUpon>SellingUI_GroupProduct.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingInterface_Mobile.resx">
+      <DependentUpon>SellingInterface_Mobile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\SellingUI_TabPageControl.resx">
+      <DependentUpon>SellingUI_TabPageControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="utilities\LoginToManager.resx">
+      <DependentUpon>LoginToManager.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="factManagementDataSet.xsc">
+      <DependentUpon>factManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="factManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>factManagementDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="factManagementDataSet.xss">
+      <DependentUpon>factManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="myDB_SQL.xsc">
+      <DependentUpon>myDB_SQL.xsd</DependentUpon>
+    </None>
+    <None Include="myDB_SQL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDB_SQL.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myDB_SQL.xss">
+      <DependentUpon>myDB_SQL.xsd</DependentUpon>
+    </None>
+    <None Include="posprinterDataSet.xsc">
+      <DependentUpon>posprinterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="posprinterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>posprinterDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="posprinterDataSet.xss">
+      <DependentUpon>posprinterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VN_PharmacyManagement_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rules-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Small-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Small-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Small-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Small-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-key-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-key-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify-key-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-database-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-database-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-database-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-database-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-next-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-next-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-next-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-next-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Delete-Database-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Delete-Database-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Delete-Database-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Delete-Database-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-database-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-database-icon_24..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-database-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-database-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok-icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anti-virus-old-school.ico" />
+    <Content Include="App_Vendor.ico" />
+    <Content Include="Resources\icon-arrow-down.png" />
+    <None Include="Resources\icon-arrow-up.png" />
+    <Content Include="Resources\icon-close-round.png" />
+    <None Include="Resources\icon-play.png" />
+    <Content Include="Resources\keyboard.png" />
+    <Content Include="Resources\sysConfig.png" />
+    <None Include="Resources\Logo.bmp" />
+    <None Include="Resources\Barcode-icon_48.png" />
+    <None Include="Resources\Barcode-icon_32.png" />
+    <None Include="Resources\Barcode-icon_24.png" />
+    <None Include="Resources\Barcode-icon_16.png" />
+    <None Include="Resources\user-login-icon.png" />
+    <None Include="Resources\invoice-icon_48.png" />
+    <None Include="Resources\invoice-icon_32.png" />
+    <None Include="Resources\invoice-icon_24.png" />
+    <None Include="Resources\invoice-icon_16.png" />
+    <None Include="Resources\shopping-cart-accept-icon_161.png" />
+    <None Include="Resources\shopping-cart-accept-icon_48.png" />
+    <None Include="Resources\shopping-cart-accept-icon_32.png" />
+    <None Include="Resources\shopping-cart-accept-icon_24.png" />
+    <None Include="Resources\shopping-cart-accept-icon_16.png" />
+    <None Include="Resources\Computer-icon_48.png" />
+    <None Include="Resources\Computer-icon_32.png" />
+    <None Include="Resources\Computer-icon_24.png" />
+    <None Include="Resources\Computer-icon_16.png" />
+    <None Include="Resources\sales-report-icon_48.png" />
+    <None Include="Resources\sales-report-icon_32.png" />
+    <None Include="Resources\sales-report-icon_24.png" />
+    <None Include="Resources\sales-report-icon_16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
